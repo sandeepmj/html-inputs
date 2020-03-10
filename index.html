@@ -24,7 +24,9 @@
   </head>
 
   <body>
+
     <div class="container">
+      <h1>HTML5 Input Types</h1>
       <form id="numbers-input">
         <h2>Numbers input</h2>
         <p>
@@ -32,7 +34,7 @@
         </p>
 
         <!-- input type ="number" provides increment buttons -->
-        <!-- max attribute sets a ceiling for an acceptable number (js validation needed) -->
+        <!-- max attribute sets a ceiling for an acceptable number (js validation needed)
 
         <p>
           Kiwis (required): <input type="number" class="fruit" id="kiwi" data-price="0.80" data-calories="200" required />
@@ -51,10 +53,11 @@
         </p>
 
         <p>
-          Oranges (placeholder text): <input type="text" class="fruit" id="orange" data-price="2.50" data-calories="600" placeholder="Yum!" />
+          Oranges (placeholder text): <input type="text" class="fruit" id="orange" data-price="2.50" data-calories="600" placeholder="Between 2 & 6" />
 
           <!-- placeholder attribute hints at type of required answer -->
           <!-- Note this is a input type="text" and not "number" -->
+          <!-- You will have to convert this to a float or integer in JavaScript -->
         </p>
 
         <p>
@@ -74,6 +77,16 @@
 
         <!-- input type button that can listen for an event -->
       </form>
+      <!--
+      <h2>Different method of controlling max and min</h2>
+      <form action="" method="get">
+        <p>
+          Bananas (min 2, max 10): <input type="number" class="fruit" id="banana" data-price="0.50" data-calories="100" min="2" max="10" />
+        </p>
+        <button type="submit" value="Submit">Submit</button>
+      </form> -->
+      <!-- must turn off javascript in js file for this to work -->
+
 
       <form>
         <h2>Pull Down</h2>
