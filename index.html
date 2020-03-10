@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <!-- set the character set -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- first step to a responsive site -->
+    <title>HTML5 Input Fields</title>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Your styles should be called here -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      	<![endif]-->
+  </head>
+
+  <body>
+    <div class="container">
+      <form id="numbers-input">
+        <h2>Numbers input</h2>
+        <p>
+          Bananas (max 10): <input type="number" class="fruit" id="banana" data-price="0.50" data-calories="100" max="10" />
+        </p>
+
+        <!-- input type ="number" provides increment buttons -->
+        <!-- max attribute sets a ceiling for an acceptable number (js validation needed) -->
+
+        <p>
+          Kiwis (required): <input type="number" class="fruit" id="kiwi" data-price="0.80" data-calories="200" required />
+          <!--  required attribute requires a response -->
+        </p>
+
+        <p>
+          Mangos (min 5): <input type="number" class="fruit" id="mango" data-price="1.50" data-calories="100" min="5" />
+          <!-- min attribute sets a floor for an acceptable number (js validation needed) -->
+        </p>
+
+        <p>
+          Apples (cursor focused here on load): <input type="number" class="fruit" id="apple" data-price="0.50" data-calories="400" autofocus />
+
+          <!-- autofocus places the cursor in that field on page load -->
+        </p>
+
+        <p>
+          Oranges (placeholder text): <input type="text" class="fruit" id="orange" data-price="2.50" data-calories="600" placeholder="Yum!" />
+
+          <!-- placeholder attribute hints at type of required answer -->
+          <!-- Note this is a input type="text" and not "number" -->
+        </p>
+
+        <p>
+          Pomegranate (field width): <input type="text" class="fruit" id="pomegranate" data-price="5.50" data-calories="100" size="5" />
+
+          <!-- size attribute sets the width of the field -->
+          <!-- does not limit how many characters you can enter -->
+        </p>
+
+        <p>
+          Melon (character limit): <input type="text" class="fruit" id="melon" data-price="5.50" data-calories="100" maxlength="5" />
+
+          <!-- maxlength attribute limits how many characters you can enter -->
+        </p>
+
+        <input id="compute" type="button" value="compute" />
+
+        <!-- input type button that can listen for an event -->
+      </form>
+
+      <form>
+        <h2>Pull Down</h2>
+        <p>
+          Select what type of tablet you ideally want.
+        </p>
+        <select name="tablet-pulldown">
+          <option value="iPad Pro" data-price="1000" data-discount=".2">iPad Pro</option>
+          <option value="iPad" data-price="2000" data-discount=".1">iPad</option>
+          <option value="Galaxy 7" data-price="3000" data-discount=".25">Galaxy 7</option>
+          <option value="Surface" data-price="4000" data-discount=".40" selected>Surface</option>
+        </select>
+
+        <!-- Note input type of **option** for pulldown -->
+        <!-- note the **selected** attribute which selects an option on load -->
+
+      </form>
+
+      <form id='tablet-checkbox'>
+        <h2>Checkbox</h2>
+
+        <p>
+          Select the tablet(s) you ideally want (check all that apply):
+        </p>
+        <input type="checkbox" id="iPad-pro" value="iPad Pro" data-price="1000" data-discount=".2">
+        <label for="iPad-pro">iPad Pro</label>
+        <br />
+        <input type="checkbox" id="iPad" value="iPad" data-price="2000" data-discount=".1">
+        <label for="iPad">iPad</label>
+        <br />
+        <input type="checkbox" id="Galaxy7" value="Galaxy7" data-price="3000" data-discount=".25" checked>
+        <label for="Galaxy7">Galaxy 7</label>
+        <br />
+        <input type="checkbox" id="Surface" value="Surface" data-price="4000" data-discount=".4">
+        <label for="Surface">Surface</label>
+      </form>
+
+      <!-- Note input type of **checkbox** for checklist -->
+      <!-- note the **checked** attribute which checks an option on load -->
+
+      <form id="tablet-range">
+        <!-- From Mozilla: Note: Currently, no browser fully supports these features.
+      Firefox doesn't support hash marks and labels at all.
+      Chrome supports hash marks but doesn't support labels.  -->
+        <h2>Range</h2>
+        <p>
+          How useful do you think a tablet would be for your work?.
+          <br /> (1 is useless, 10 is indispensible)
+        </p>
+        1 <input type="range" id="how-badly" min="1" max="10" step="1" /> 10
+        <!-- Note input type of **range** to create a range with min and max values -->
+      </form>
+
+      <form>
+        <h2>What is your favorite sport?</h2>
+
+        <input type="text" list="fav-sports">
+        <datalist id="fav-sports">
+          <option value="Futbol">
+          <option value="Football">
+          <option value="Tennis">
+          <option value="Long Jump">
+          <option value="50 Meter Sprint">
+          <option value="Ultimate Frisbee">
+          <option value="Basketball">
+        </datalist>
+      </form>
+      <!-- datelist attribute provides a list of common choices -->
+      <!-- Note, however, that anything can be typed -->
+      <p>
+        <ul>
+          <li>
+            The datalist attribute can list common choices.
+          </li>
+          <li>
+            But you can still enter anything you want.
+          </li>
+          <li>
+            Place the actual datalist anywhere on the page, but it must match the list name.
+          </li>
+          <li>
+            Makes sense to keep it close to form.
+          </li>
+        </ul>
+      </p>
+
+      <form id="tablet-radio">
+        <h2>Radio buttons</h2>
+        <p>
+          What is your annual household income?
+        </p>
+        <input type="radio" name="income" value="15"> Less than $15,000<br />
+        <input type="radio" name="income" value="55" checked> $15,001-$55,000<br />
+        <input type="radio" name="income" value="120"> $55,001-$120-000 <br />
+        <input type="radio" name="income" value="250"> $120,001-$250,000<br />
+        <input type="radio" name="income" value="251"> More than $250,001<br />
+
+
+        <!-- Note input type of **radio** for radio input -->
+        <!-- note the **checked** attribute which checks a radio input on load -->
+      </form>
+
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <!-- Your javascript should be called here -->
+    <script src="script.js" type="text/javascript"></script>
+  </body>
+
+</html>
