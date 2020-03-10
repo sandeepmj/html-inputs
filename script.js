@@ -2,7 +2,7 @@ $(document).ready(function () { //on DOM ready, bind clicks
 
 	// Validate min and max numbers
 	$("input[max], input[min]").on("keyup", function (e) { //any input that has a min or max defined
-		var ele = $(this), //the input field we're typing in
+		let ele = $(this), //the input field we're typing in
 			min = ele.attr("min"), //grab the minimum value as defined
 			max = ele.attr("max"), //grab the maximum value as defined
 			type = ele.attr("type"), //grab the type of input this is

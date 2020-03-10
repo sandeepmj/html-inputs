@@ -60,7 +60,7 @@
         <p>
           Pomegranate (field width): <input type="text" class="fruit" id="pomegranate" data-price="5.50" data-calories="100" size="5" />
 
-          <!-- size attribute sets the width of the field -->
+          <!-- size attribute sets the width of the field in number of characters -->
           <!-- does not limit how many characters you can enter -->
         </p>
 
@@ -81,10 +81,10 @@
           Select what type of tablet you ideally want.
         </p>
         <select name="tablet-pulldown">
-          <option value="iPad Pro" data-price="1000" data-discount=".2">iPad Pro</option>
+          <option value="iPad Pro" data-price="1000" data-discount=".2" selected>iPad Pro</option>
           <option value="iPad" data-price="2000" data-discount=".1">iPad</option>
           <option value="Galaxy 7" data-price="3000" data-discount=".25">Galaxy 7</option>
-          <option value="Surface" data-price="4000" data-discount=".40" selected>Surface</option>
+          <option value="Surface" data-price="4000" data-discount=".40">Surface</option>
         </select>
 
         <!-- Note input type of **option** for pulldown -->
@@ -113,19 +113,6 @@
 
       <!-- Note input type of **checkbox** for checklist -->
       <!-- note the **checked** attribute which checks an option on load -->
-
-      <form id="tablet-range">
-        <!-- From Mozilla: Note: Currently, no browser fully supports these features.
-      Firefox doesn't support hash marks and labels at all.
-      Chrome supports hash marks but doesn't support labels.  -->
-        <h2>Range</h2>
-        <p>
-          How useful do you think a tablet would be for your work?.
-          <br /> (1 is useless, 10 is indispensible)
-        </p>
-        1 <input type="range" id="how-badly" min="1" max="10" step="1" /> 10
-        <!-- Note input type of **range** to create a range with min and max values -->
-      </form>
 
       <form>
         <h2>What is your favorite sport?</h2>
@@ -162,6 +149,7 @@
 
       <form id="tablet-radio">
         <h2>Radio buttons</h2>
+
         <p>
           What is your annual household income?
         </p>
@@ -175,6 +163,29 @@
         <!-- Note input type of **radio** for radio input -->
         <!-- note the **checked** attribute which checks a radio input on load -->
       </form>
+
+
+      <form id="tablet-range">
+        <!-- From Mozilla: Note: Currently, no browser fully supports these features.
+      Firefox doesn't support hash marks and labels at all.
+      Chrome supports hash marks but doesn't support labels.  -->
+        <h2>Range</h2>
+        <h4>When precision does not matter</h4>
+        <!-- Unfortunately not supported in most browser -->
+        <p>
+          How loud do you play your music normally?
+          <br />
+        </p>
+        Muted <input type="range" id="how-badly" min="1" max="10" step="1" list="tickmarks" /> Blasting
+        <datalist id="tickmarks">
+          <option value="25"></option>
+          <option value="50" label="50%"></option>
+          <option value="75"></option>
+        </datalist>
+        <!-- Note input type of **range** to create a range with min and max values -->
+      </form>
+
+
 
     </div>
 
