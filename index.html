@@ -127,10 +127,10 @@
       <!-- Note input type of **checkbox** for checklist -->
       <!-- note the **checked** attribute which checks an option on load -->
 
-      <form>
+      <form id='favsport-datalist'>
         <h2>What is your favorite sport?</h2>
 
-        <input type="text" list="fav-sports">
+        <input type="text" name="fav-sports" list="fav-sports">
         <datalist id="fav-sports">
           <option value="Futbol">
           <option value="Football">
@@ -166,17 +166,18 @@
         <p>
           What is your annual household income?
         </p>
-        <input type="radio" name="income" value="15"> Less than $15,000<br />
-        <input type="radio" name="income" value="55" checked> $15,001-$55,000<br />
-        <input type="radio" name="income" value="120"> $55,001-$120-000 <br />
-        <input type="radio" name="income" value="250"> $120,001-$250,000<br />
-        <input type="radio" name="income" value="251"> More than $250,001<br />
+        <input type="radio" name="income" value="Less than $15,000"> Less than $15,000<br />
+        <input type="radio" name="income" value="$15,001-$55,000" checked> $15,001-$55,000<br />
+        <input type="radio" name="income" value="$55,001-$120-000"> $55,001-$120-000 <br />
+        <input type="radio" name="income" value="$120,001-$250,000"> $120,001-$250,000<br />
+        <input type="radio" name="income" value="More than $250,001"> More than $250,001<br />
 
 
         <!-- Note input type of **radio** for radio input -->
         <!-- note the **checked** attribute which checks a radio input on load -->
       </form>
 
+      <input id="radio-btn" name="option" type="button" value="Select" />
 
       <form id="tablet-range">
         <!-- From Mozilla: Note: Currently, no browser fully supports these features.
