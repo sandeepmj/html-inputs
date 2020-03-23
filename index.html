@@ -88,12 +88,12 @@
       <!-- must turn off javascript in js file for this to work -->
 
 
-      <form>
+      <form action="#">
         <h2>Pull Down</h2>
         <p>
           Select what type of tablet you ideally want.
         </p>
-        <select name="tablet-pulldown">
+        <select id="tablet-pulldown">
           <option value="iPad Pro" data-price="1000" data-discount=".2" selected>iPad Pro</option>
           <option value="iPad" data-price="2000" data-discount=".1">iPad</option>
           <option value="Galaxy 7" data-price="3000" data-discount=".25">Galaxy 7</option>
@@ -105,7 +105,9 @@
 
       </form>
 
-      <form id='tablet-checkbox'>
+      <button id="submit">Submit</button>
+
+      <form id='tablet-checkbox' action="#">
         <h2>Checkbox</h2>
 
         <p>
@@ -127,7 +129,7 @@
       <!-- Note input type of **checkbox** for checklist -->
       <!-- note the **checked** attribute which checks an option on load -->
 
-      <form id='favsport-datalist'>
+      <form id='favsport-datalist' action="#">
         <h2>What is your favorite sport?</h2>
 
         <input type="text" name="fav-sports" list="fav-sports">
@@ -160,7 +162,7 @@
         </ul>
       </p>
 
-      <form id="tablet-radio">
+      <form id="tablet-radio" action="#">
         <h2>Radio buttons</h2>
 
         <p>
@@ -179,7 +181,7 @@
 
       <input id="radio-btn" name="option" type="button" value="Select" />
 
-      <form id="tablet-range">
+      <form id="tablet-range" action="#">
         <!-- From Mozilla: Note: Currently, no browser fully supports these features.
       Firefox doesn't support hash marks and labels at all.
       Chrome supports hash marks but doesn't support labels.  -->
