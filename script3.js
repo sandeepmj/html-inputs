@@ -4,6 +4,9 @@
  */
 
 $("body").on("submit", "#numbers-input", function (e) {
+  e.preventDefault(); //prevent the typical form submission.
+
+
   const form = e.target;
   const $form = $(e.target);
 
